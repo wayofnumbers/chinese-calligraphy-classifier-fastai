@@ -1,13 +1,9 @@
-Title: How I Trained Computer to Learn Calligraphy Styles: Part 2
-Subtitle: Build a Deep Learning Model with fast.ai Library
-Slug: chinese-calligraphy-classifier-2
+# How I Trained Computer to Learn Calligraphy Styles: Part 2
+### Build a Deep Learning Model with fast.ai Library
+
 Date: 2019-09-16 20:00
 Category: Machine Learning
 Tags: Machine Learning, AI, Deep Learning, fast.ai, calligraphy
-author: Michael Li
-Summary: Fine-tune model for Chinese Calligraphy Classifier with fast.ai library
-
-[TOC]
 
 
 ![Photo by [Kon Karampelas](https://unsplash.com/@konkarampelas?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://cdn-images-1.medium.com/max/12000/0*gzpUfcpouuU10xO1)_Photo by [Kon Karampelas](https://unsplash.com/@konkarampelas?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)_
