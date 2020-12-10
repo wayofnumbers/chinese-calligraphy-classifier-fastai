@@ -1,5 +1,5 @@
 # How I Trained Computer to Learn Calligraphy Styles: Part 1
-###Build a Deep Learning Model with fast.ai Library
+### Build a Deep Learning Model with fast.ai Library
 
 
 Date: 2019-09-15 20:00
