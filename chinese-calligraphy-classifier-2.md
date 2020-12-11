@@ -1,10 +1,11 @@
+
 # How I Trained Computer to Learn Calligraphy Styles: Part 2
-### Build a Deep Learning Model with fast.ai Library
+
+**Build a Deep Learning Model with fast.ai Library**
 
 Date: 2019-09-16 20:00
 Category: Machine Learning
 Tags: Machine Learning, AI, Deep Learning, fast.ai, calligraphy
-
 
 ![Photo by [Kon Karampelas](https://unsplash.com/@konkarampelas?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://cdn-images-1.medium.com/max/12000/0*gzpUfcpouuU10xO1)_Photo by [Kon Karampelas](https://unsplash.com/@konkarampelas?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)_
 
@@ -12,7 +13,7 @@ I wanted to start a series of posts for the projects I finished/polished for my 
 
 Model [1](https://medium.com/@lymenlee/deep-learning-models-by-fast-ai-library-c1cccc13e2b3) ・[1a](https://medium.com/datadriveninvestor/chinese-calligraphy-classifier-fine-tuning-cbfbf0e304d8)
 
-### Making It Even Better
+## Making It Even Better
 
 In my [last post](https://medium.com/datadriveninvestor/deep-learning-models-by-fast-ai-library-c1cccc13e2b3), I explained the approach I take for this image recognition problem using fast.ai library. As you can see, once we get the data down to a fast.ai ImageDataBunch, the code is rather simple and we achieve a 90% accuracy rate, which is quite impressive considering the quality of our data(randomly downloaded from Google/Baidu search without much data cleaning). Now, can we do better?
 [**DDI Editor's Pick: 5 Machine Learning Books That Turn You from Novice to Expert | Data Driven…**
@@ -30,7 +31,7 @@ How? Well, there are two things in our prior pipeline that could improve:
 
 Let’s dive deeper.
 
-### Image Pre-Processing Tweak
+## Image Pre-Processing Tweak
 
 Remember when we import our data into fast.ai ImageDataBunch, we used the following code:
 
@@ -46,7 +47,7 @@ To fix this, we tweaked our code as below:
 
 Notice we pass do_flip=False into the get_transforms function, thus telling the module to not randomly flipping our images during importing.
 
-### Model Training Fine Tune
+## Model Training Fine Tune
 
 Now that the image pre-processing is done. We can re-structure out model training to avoid overfitting and achieve better accuracy. This approach is introduced in the fast.ai [Practical Deep Learning for Coders](https://course.fast.ai/) course [lesson 3](https://course.fast.ai/videos/?lesson=3).
 
@@ -68,7 +69,7 @@ After unfreeze, we trained the model with another 4 epochs, the accuracy broke i
 
 This simple technique is also called ‘**Progressive resizing**’ by [Jeremy Howard](undefined) from [fast.ai](https://www.fast.ai/2018/08/10/fastai-diu-imagenet/) and helped his team [beat Google in a competition of speed training IMAGENET in \*DAWNBench](https://www.theverge.com/2018/5/7/17316010/fast-ai-speed-test-stanford-dawnbench-google-intel) by training the IMAGGNET in a whopping**18** minutes and **\$40** Amazon AWS cost.\*
 
-### To Wrap It Up
+## To Wrap It Up
 
 ![Photo by [Franki Chamaki](https://unsplash.com/@franki?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://cdn-images-1.medium.com/max/8064/0*ccqj05oUPQjsG_Jk)_Photo by [Franki Chamaki](https://unsplash.com/@franki?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)_
 

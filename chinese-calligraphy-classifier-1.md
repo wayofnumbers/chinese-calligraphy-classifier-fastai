@@ -1,11 +1,11 @@
-# How I Trained Computer to Learn Calligraphy Styles: Part 1
-### Build a Deep Learning Model with fast.ai Library
 
+# How I Trained Computer to Learn Calligraphy Styles: Part 1
+
+**Build a Deep Learning Model with fast.ai Library**
 
 Date: 2019-09-15 20:00
 Category: Machine Learning
 Tags: Machine Learning, AI, Deep Learning, fast.ai, calligraphy
-
 
 ![Photo by [Raychan](https://unsplash.com/@wx1993?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://cdn-images-1.medium.com/max/10944/0*1vRfrkhsQiTkkBgJ)_Photo by [Raychan](https://unsplash.com/@wx1993?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)_
 
@@ -13,7 +13,7 @@ I wanted to start a series of posts for the projects I finished/polished for my 
 
 Model [1](https://medium.com/@lymenlee/deep-learning-models-by-fast-ai-library-c1cccc13e2b3) ・[1a](https://medium.com/datadriveninvestor/chinese-calligraphy-classifier-fine-tuning-cbfbf0e304d8)
 
-### **Why Build a Chinese Calligraphy Classifier**
+## **Why Build a Chinese Calligraphy Classifier**
 
 Like any calligraphy, Chinese calligraphy is a form of art. Some great pieces written by some ancient masters have both great art value and economic values (selling at multi-million dollars on auctions).
 
@@ -35,7 +35,7 @@ as a proof-of-concept. Once successful trained, the model could serve as a trans
 
 > This calligrapher classifier can serve as a way to quickly identify artworks by great calligraphers. ( Finding diamond in the rough _😉_)
 
-### Collecting Data
+## Collecting Data
 
 To build a calligraphy classifier, we will need some calligraphy examples of each style. I did some search online and cannot find any good already-made data-set for different calligraphy styles. So I’ll have to build it myself.
 
@@ -57,7 +57,7 @@ Building a images data-set isn’t hard thanks to Google’s Images search funct
 
 6. Alternatively, you can also go to Baidu.com for images search, using this [snippet](https://gist.github.com/wayofnumbers/39842bb909c04070de49e53c418d512f) to automatically download the images you searched for. (Code too long to be put into this post, so I link it here).
 
-### Let’s Have a Look at the Data
+## Let’s Have a Look at the Data
 
 If you organize the downloaded images into train/lishu, train/kaishu, train/xiaozhuan, then you can run the following code to import them into and transformed accordingly, ready to fit a model.fast.ai’s powerfulImageDataBunch object, where all data is organized, splitted and transformed accordingly, ready to fit a model.
 
@@ -71,7 +71,7 @@ Now that data is imported properly, let’s look at our images:
 
 As we can see from the few examples above, the data-set is rather ‘dirty’. The images are not properly cropped, with some side notes with different calligraphy style and some images only have one or two characters. But it’s OK. Let’s quickly train the model and see how it performs so we can gain some insights into our data.
 
-### Quick and Dirty Training
+## Quick and Dirty Training
 
 Let’s first create a model. We’ll be using transfer learning and use ResNet50 as our model. Pre-trained weights will be downloaded.
 
@@ -81,7 +81,7 @@ With 3 epoches of fit_one_cycle, we managed to reach a 90% accuracy rate on our 
 
 ![](https://cdn-images-1.medium.com/max/2000/1*44IMsadGzm0-mF2SdrvUKA.png)
 
-### Unfreeze and Fine-Tune Our Training
+## Unfreeze and Fine-Tune Our Training
 
 Since the fit_one_cycle function will freeze the initial layers and only training the last couple of layers to speed up the training speed(this approach works because usually for transfer learning, initial layers will capture basic features of the images that are not likely to change a lot), we can hopefully further improve our accuracy by unfreezing all the layers and train again.
 
@@ -95,7 +95,7 @@ Let’s train another two epoch:
 
 Slightly better and the validation_loss starts to surpass train_loss, a sign of overfitting. Let’s stop here and wrap things up.
 
-### Results Interpretation
+## Results Interpretation
 
 We reached 90% accuracy. Not state-of-the-art but already pretty impressive considering we only have a roughly 700 images per class data-set. More data will definitely lead to better results. Let’s look at our results and see if we can find some insights.
 
@@ -115,7 +115,7 @@ Look at the confusion matrix, the model does really well in recognize ‘xiaozhu
 > If there are too few (1st row, 1st column) or too many (2nd row, 2nd column) characters, the model will struggle.
 > Some image shows ‘in-between’ kind of styles which the model also had a hard time classify. Which is totally normal, since even human will have a hard time telling which style it belongs to.
 
-### Final Thoughts
+## Final Thoughts
 
 This experimental project actually works exceedingly well with fast.ai library. [Jeremy Howard](undefined) said on the course and I quote here (not exactly word by word, but I hope I captured the gist of it. 🙏):
 
