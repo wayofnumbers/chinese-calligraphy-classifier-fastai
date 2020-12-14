@@ -45,23 +45,24 @@ Building a images data-set isn’t hard thanks to Google’s Images search funct
 
 
 ## Notebook and Dataset
-You can find the full **Jupyter Notebook** ![here](https://github.com/wayofnumbers/chinese-calligraphy-classifier-fastai/blob/main/chinese-calligraphy-classifier-using-fast-ai.ipynb) and **Dataset** ![here](https://github.com/wayofnumbers/chinese-calligraphy-classifier-fastai/tree/main/data)
+You can find the full **Jupyter Notebook** [here](https://github.com/wayofnumbers/chinese-calligraphy-classifier-fastai/blob/main/chinese-calligraphy-classifier-using-fast-ai.ipynb) and **Dataset** [here](https://github.com/wayofnumbers/chinese-calligraphy-classifier-fastai/tree/main/data)
 
 If you want to give it a try, you can also find the Notebook on Kaggle where you can easily copy and run yourself(Dataset on Kaggle too):
-**Kaggle Notebook** (https://www.kaggle.com/lymenlee/chinese-calligraphy-classifier-using-fast-ai)
+
+[Kaggle Notebook](https://www.kaggle.com/lymenlee/chinese-calligraphy-classifier-using-fast-ai)
 
 
 ## Articles
 I wrote two articles about this project on Medium.com, which you can find below:
 
-**How I Trained Computer to Learn Calligraphy Styles: Part1** (https://wayofnumbers.com/chinese-calligraphy-classifier-1), **Part 2** (https://wayofnumbers.com/chinese-calligraphy-classifier-2)
+[How I Trained Computer to Learn Calligraphy Styles: Part1](https://wayofnumbers.com/chinese-calligraphy-classifier-1), [Part 2](https://wayofnumbers.com/chinese-calligraphy-classifier-2)
 
 
 ## Snippets
-Python scripts to download the searched images from Baidu can be found ![here](https://github.com/wayofnumbers/chinese-calligraphy-classifier-fastai/blob/main/scripts/collect_images_from_baidu_search_results.py)
+Python scripts to download the searched images from Baidu can be found [here](https://github.com/wayofnumbers/chinese-calligraphy-classifier-fastai/blob/main/scripts/collect_images_from_baidu_search_results.py)
 
 
 ## Web app and Deployment
 This model can be deployed into a hosted VPS with ease, here is a guide I wrote that can help you with that:
 
-**How to Deploy Your Machine Learning Web App to Digital Ocean** (https://wayofnumbers.com/how-to-deploy-ml-web-app-to-do)
+[How to Deploy Your Machine Learning Web App to Digital Ocean](https://wayofnumbers.com/how-to-deploy-ml-web-app-to-do)
